@@ -1,0 +1,136 @@
+/*background-color: #23a559;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23000000' fill-opacity='0.25'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+*/
+@import "tailwindcss";
+
+@theme {
+  /* Define your custom 'checkpoint-bg' color here */
+  --color-checkpoint-bg: #050505; 
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base styles using standard CSS (preferred in v4) */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-checkpoint-bg);
+  color: #f1f5f9; /* slate-100 */
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.scroll-runway {
+  background-color: #000;
+  width: 100%;
+}
+
+/* The Black Rectangle Background */
+.title-boundary {
+  height: 100px;
+  background-color: #000 !important;
+  width: 100%;
+  border-top: 4px solid #14a84d;
+  border-bottom: 4px solid #14a84d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  position: relative;
+}
+
+.bottom-bar {
+  z-index: 10;
+  color: #14a84d;
+  font-family: monospace;
+}
+
+.project-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #107f3e;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  overflow: hidden;
+}
+
+.typewriter-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #14a84d !important; 
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  max-width: 1100px;
+  flex-grow: 1; 
+  padding: 40px 0;
+  perspective: 1500px;
+}
+
+.card {
+  background: #ffffff !important;
+  border: 5px solid #000 !important;
+  box-shadow: 15px 15px 0px 0px #000;
+  padding: 2rem;
+  opacity: 0;
+  height: 240px;
+  max-width: 460 px;
+  z-index: 50;
+}
+
+/* Card Text */
+.card h3 {
+  color: #000 !important;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #111 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Positioning of cards in ProjectInfo */
+.item-1 { grid-area: 1 / 1 / 2 / 2; align-self: center; justify-self: start; }
+.item-2 { grid-area: 1 / 2 / 2 / 3; align-self: center; justify-self: end; }
+.item-3 { grid-area: 2 / 1 / 3 / 2; align-self: center; justify-self: start; }
+.item-4 { grid-area: 2 / 2 / 3 / 3; align-self: center; justify-self: end; }
+
+canvas {
+  background: transparent !important;
+  outline: none;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.neo-btn {
+  @apply border-2 border-black bg-white px-6 py-2 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all;
+}
