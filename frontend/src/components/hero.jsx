@@ -25,7 +25,7 @@ const Hero = () => {
     return (
         <section
             ref={scope}
-            className="relative flex min-h-screen items-bottom justify-lefy overflow-hidden text-slate-100"
+            className="relative flex min-h-screen items-bottom justify-left overflow-hidden text-slate-100"
             style={{
                 backgroundImage: svgBg,
                 backgroundSize: "cover",
@@ -40,7 +40,7 @@ const Hero = () => {
                     <div className="flex flex-col items-start space-y-4 z-20">
                         <div>
                             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400/80">
-                                Lung cancer, caught before it shouts.
+                                Cancer caught before it shouts.
                             </p>
 
                             <h1 className="max-w-xl text-balance text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-7xl">

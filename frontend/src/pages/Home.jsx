@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar.jsx';
 import Hero from '../components/hero.jsx';
 import ProjectInfo from '../components/ProjectInfo.jsx';
 import Blocks from '../components/blocks.jsx';
+import Footer from '../components/footer.jsx';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Hero />
         <ProjectInfo />
         <Blocks />
+        <Footer />
       </main>
     </div>
   );
